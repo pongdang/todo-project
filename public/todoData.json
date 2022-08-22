@@ -1,0 +1,7 @@
+{
+  "todoData": [
+    { "id": 1, "content": "세수하기", "checked": true },
+    { "id": 2, "content": "양치하기", "checked": true },
+    { "id": 3, "content": "공부하기", "checked": false }
+  ]
+}
