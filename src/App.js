@@ -14,7 +14,6 @@ function App() {
 
   const handleChange = (e) => {
     const { value } = e.target;
-    console.log(value);
     setTodoValue(value);
   };
 
