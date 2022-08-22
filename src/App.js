@@ -14,21 +14,24 @@ function App() {
 
   const handleChange = (e) => {
     const { value } = e.target;
-    setTodoValue({
-      id: todoList.length + 1,
-      content: value,
-    });
+    setTodoValue(value);
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setTodoList([...todoList, todoValue]);
+  const handleSubmit = () => {
+    setTodoList([
+      ...todoList,
+      {
+        id: todoList.length + 1,
+        content: todoValue,
+      },
+    ]);
+    setTodoValue('');
   };
 
   return (
     <section>
       <h1>To do</h1>
-      <input onChange={handleChange} />
+      <input onChange={handleChange} value={todoValue} />
       <button onClick={handleSubmit}>추가</button>
       <ul>
         {todoList.map((todo) => (
